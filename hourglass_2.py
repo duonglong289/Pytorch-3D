@@ -277,10 +277,11 @@ class HourglassNet(nn.Module):
 
 
 
-
-
-
 def hg(**kwargs):
     model = HourglassNet(Bottleneck, num_stacks=kwargs['num_stacks'], num_blocks=kwargs['num_blocks'],
                          num_classes=kwargs['num_classes'])
     return model
+
+if __name__ == '__main__':
+    model = hg()
+    print(model)
